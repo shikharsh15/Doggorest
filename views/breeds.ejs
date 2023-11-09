@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+    <% for(let i=0;i<breeds.length;i++){ %>
+        <nav class="navbar bg-body-tertiary my-2 rounded-3 mx-4">
+            <div class="container-fluid">
+              <a class="navbar-brand"><%= i+1 %>. <%= breeds[i] %></a>
+              <a href="/selection?name=<%= breeds[i]%>">
+                <button class="btn btn-outline-success" type="submit">Find a Pic</button>
+            </a>
+              
+            </div>
+          </nav>
+    <% } %>
+
+<%- include("partials/footer.ejs") %>
